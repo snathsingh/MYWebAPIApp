@@ -10,6 +10,7 @@ namespace MyWebApiApplication.Controllers
     public class ValuesController : ApiController
     {
         // GET api/values
+        [Route("/shakti")]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
