@@ -167,6 +167,7 @@
     <Compile Include="CustomActionFilters\CheckApiKey.cs" />
     <Compile Include="CustomConstraints\Divisibleby10.cs" />
     <Compile Include="CustomDelegatingHandler\ApiKeyHandler.cs" />
+    <Compile Include="CustomDelegatingHandler\LoadBalancerHandler.cs" />
     <Compile Include="CustomDelegatingHandler\TimerHandler.cs" />
     <Compile Include="CustomDelegatingHandler\XHTTPOVerrideDelegatingFilter.cs" />
     <Compile Include="Global.asax.cs">

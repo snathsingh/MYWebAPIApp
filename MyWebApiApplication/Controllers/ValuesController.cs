@@ -18,7 +18,7 @@ namespace MyWebApiApplication.Controllers
         public IEnumerable<string> GetA(int id)
         {
             //Thread.Sleep(2000);            
-            return new string[] { "value1", "value2",Request.GetApiKey() };
+            return new string[] { "value1", "value2",Request.GetApiKey(),Request.RequestUri.ToString() };
         }
 
         // GET api/values/5
