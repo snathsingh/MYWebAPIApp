@@ -12,7 +12,7 @@ namespace MyWebApiApplication.Controllers
     public class ValuesController : ApiController
     {
         // GET api/values
-        [Route("shakti/{id:Divisibleby10}", Name ="JackAss",Order =2)]
+        [Route("shakti/{id:Divisibleby10}", Name ="JackAss",Order =1)]
         public IEnumerable<string> GetA(int id)
         {
             Thread.Sleep(2000);
@@ -22,7 +22,7 @@ namespace MyWebApiApplication.Controllers
         // GET api/values/5
         //[AcceptVerbs("PURGE")]
         //[Route("{id:Divisibleby10}")]
-        [Route("shakti1/{id:int}", Name = "JackAss1", Order = 1)]
+        [Route("shakti1/{id:int}", Name = "JackAss1", Order = 2)]
         public HttpResponseMessage Get(int id)
         {
             //return "value";            

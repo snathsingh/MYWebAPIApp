@@ -80,3 +80,5 @@ C:\Users\shakti.singh\source\repos\MyWebApiApplication\MyWebApiApplication\obj\D
 C:\Users\shakti.singh\source\repos\MyWebApiApplication\MyWebApiApplication\obj\Debug\MyWebApiApplication.csproj.CopyComplete
 C:\Users\shakti.singh\source\repos\MyWebApiApplication\MyWebApiApplication\obj\Debug\MyWebApiApplication.dll
 C:\Users\shakti.singh\source\repos\MyWebApiApplication\MyWebApiApplication\obj\Debug\MyWebApiApplication.pdb
+C:\Users\shakti.singh\source\repos\MyWebApiApplication\MyWebApiApplication\bin\Swashbuckle.Core.dll
+C:\Users\shakti.singh\source\repos\MyWebApiApplication\MyWebApiApplication\bin\WebActivatorEx.dll
