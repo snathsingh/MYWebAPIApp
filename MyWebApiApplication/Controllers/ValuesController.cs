@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading;
 using System.Web.Http;
 using MyWebApiApplication.CustomConstraints;
 
@@ -11,24 +12,30 @@ namespace MyWebApiApplication.Controllers
     public class ValuesController : ApiController
     {
         // GET api/values
-        [Route("shakti/{id:Divisibleby10}", Name ="JackAss",Order =0)]
+        [Route("shakti/{id:Divisibleby10}", Name ="JackAss",Order =2)]
         public IEnumerable<string> GetA(int id)
         {
+            Thread.Sleep(2000);
             return new string[] { "value1", "value2" };
         }
 
         // GET api/values/5
         //[AcceptVerbs("PURGE")]
         //[Route("{id:Divisibleby10}")]
-        [Route("shakti/{id:int}", Name = "JackAss1", Order = 1)]
-        public string Get(int id)
+        [Route("shakti1/{id:int}", Name = "JackAss1", Order = 1)]
+        public HttpResponseMessage Get(int id)
         {
-            return "value";
+            //return "value";            
+            string uri = Url.Link("JackAss", new { id = id });
+            var response = Request.CreateResponse(HttpStatusCode.MovedPermanently);
+            response.Headers.Location = new Uri(uri);
+            return response;
         }
 
         // POST api/values
         public void Post([FromBody]string value)
         {
+
         }
 
         // PUT api/values/5
