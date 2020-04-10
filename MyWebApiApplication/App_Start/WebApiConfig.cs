@@ -19,6 +19,7 @@ namespace MyWebApiApplication
             config.MessageHandlers.Add(new XHTTPOVerrideDelegatingFilter());
             config.MessageHandlers.Add(new LoadBalancerHandler());
             config.Filters.Add(new CheckApiKey());
+            config.Filters.Add(new ActionTimeConsumedFilter());
             var constraintResolver = new DefaultInlineConstraintResolver();
             constraintResolver.ConstraintMap.Add("Divisibleby10", typeof(Divisibleby10Constraint));
             // Web API routes

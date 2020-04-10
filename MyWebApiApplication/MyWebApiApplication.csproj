@@ -164,6 +164,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="CustomActionFilters\ActionTimeConsumedFilter.cs" />
     <Compile Include="CustomActionFilters\CheckApiKey.cs" />
     <Compile Include="CustomConstraints\Divisibleby10.cs" />
     <Compile Include="CustomDelegatingHandler\ApiKeyHandler.cs" />
