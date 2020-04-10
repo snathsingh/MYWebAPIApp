@@ -13,6 +13,7 @@ namespace MyWebApiApplication.Controllers
     public class ValuesController : ApiController
     {
         // GET api/values
+        [AcceptVerbs("HEAD","GET")]
         [Route("shakti/{id:Divisibleby10}", Name ="JackAss",Order =1)]
         public IEnumerable<string> GetA(int id)
         {
@@ -21,7 +22,7 @@ namespace MyWebApiApplication.Controllers
         }
 
         // GET api/values/5
-        //[AcceptVerbs("PURGE")]
+        [AcceptVerbs("VIEW","GET")]
         //[Route("{id:Divisibleby10}")]
         [Route("shakti1/{id:int}", Name = "JackAss1", Order = 2)]
         public HttpResponseMessage Get(int id)
@@ -40,7 +41,7 @@ namespace MyWebApiApplication.Controllers
         }
 
         // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
+        public void Put([FromBody]string value)
         {
         }
 

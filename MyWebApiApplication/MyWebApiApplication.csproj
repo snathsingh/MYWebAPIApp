@@ -168,6 +168,7 @@
     <Compile Include="CustomConstraints\Divisibleby10.cs" />
     <Compile Include="CustomDelegatingHandler\ApiKeyHandler.cs" />
     <Compile Include="CustomDelegatingHandler\TimerHandler.cs" />
+    <Compile Include="CustomDelegatingHandler\XHTTPOVerrideDelegatingFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

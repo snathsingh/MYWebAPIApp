@@ -16,6 +16,7 @@ namespace MyWebApiApplication
             // Web API configuration and services
             config.MessageHandlers.Add(new TimerHandler());
             config.MessageHandlers.Add(new ApiKeyHandler());
+            config.MessageHandlers.Add(new XHTTPOVerrideDelegatingFilter());
             config.Filters.Add(new CheckApiKey());
             var constraintResolver = new DefaultInlineConstraintResolver();
             constraintResolver.ConstraintMap.Add("Divisibleby10", typeof(Divisibleby10Constraint));
