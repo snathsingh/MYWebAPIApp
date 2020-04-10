@@ -38,11 +38,11 @@ namespace MyWebApiApplication.CustomDelegatingHandler
             else if (request.Headers.Contains(XForwardedFor) && request.Headers.Contains(XForwardedHost) && request
                 .Headers.Contains(XForwardedProto))
             {
-                UriBuilder uri = new UriBuilder()
+                UriBuilder uri = new UriBuilder(request.RequestUri)
                 {
-                    Host = XForwardedFor,
+                    Host = request.Headers.GetValues(XForwardedHost).First(),
                     Port = 80,
-                    Scheme = XForwardedProto
+                    Scheme = request.Headers.GetValues(XForwardedProto).First()
                 };
                 request.RequestUri = uri.Uri;
             }
