@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Web.Http;
 using MyWebApiApplication.CustomConstraints;
+using MyWebApiApplication.CustomDelegatingHandler;
 
 namespace MyWebApiApplication.Controllers
 {
@@ -15,8 +16,8 @@ namespace MyWebApiApplication.Controllers
         [Route("shakti/{id:Divisibleby10}", Name ="JackAss",Order =1)]
         public IEnumerable<string> GetA(int id)
         {
-            Thread.Sleep(2000);
-            return new string[] { "value1", "value2" };
+            //Thread.Sleep(2000);            
+            return new string[] { "value1", "value2",Request.GetApiKey() };
         }
 
         // GET api/values/5

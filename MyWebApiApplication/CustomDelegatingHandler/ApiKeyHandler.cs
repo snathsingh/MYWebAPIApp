@@ -12,7 +12,7 @@ namespace MyWebApiApplication.CustomDelegatingHandler
 {
     public class ApiKeyHandler : DelegatingHandler
     {
-        public readonly string apiKey = "api_key";
+        public const string apiKey = "api_key";
         protected async override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             string apiKeyQuery = null;
@@ -23,6 +23,17 @@ namespace MyWebApiApplication.CustomDelegatingHandler
             apiKeyQuery = str.FirstOrDefault();
             request.Properties.Add(apiKey, apiKeyQuery);
             return await base.SendAsync(request, cancellationToken);
+        }
+
+    }
+
+    public static class RequestExtension
+    {
+        public static string GetApiKey(this HttpRequestMessage request)
+        {
+            object val = null;
+            request.Properties.TryGetValue(ApiKeyHandler.apiKey, out val);
+            return val.ToString();
         }
     }
 }
