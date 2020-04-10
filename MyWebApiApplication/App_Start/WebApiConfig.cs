@@ -20,7 +20,9 @@ namespace MyWebApiApplication
             config.MessageHandlers.Add(new LoadBalancerHandler());
             config.Filters.Add(new CheckApiKey());
             config.Filters.Add(new ActionTimeConsumedFilter());
+            //config.Filters.Add(new ClientSideCachingAttribute());
             var constraintResolver = new DefaultInlineConstraintResolver();
+
             constraintResolver.ConstraintMap.Add("Divisibleby10", typeof(Divisibleby10Constraint));
             // Web API routes
             config.MapHttpAttributeRoutes(constraintResolver);
