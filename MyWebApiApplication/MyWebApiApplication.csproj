@@ -165,6 +165,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="CustomActionFilters\ActionTimeConsumedFilter.cs" />
+    <Compile Include="CustomActionFilters\CacheActionResult.cs" />
     <Compile Include="CustomActionFilters\CheckApiKey.cs" />
     <Compile Include="CustomActionFilters\ClientSideCachingAttribute.cs" />
     <Compile Include="CustomConstraints\Divisibleby10.cs" />
