@@ -47,6 +47,7 @@ namespace MyWebApiApplication.CustomActionFilters
                     MaxAge = TimeSpan.FromSeconds(Duration)
                 };
                 response.Headers.Date = DateTime.Now;
+                Thread.Sleep(2000);
                 response.Content.Headers.Expires = response.Headers.Date+TimeSpan.FromSeconds(Duration+30);
             }
             return response;
